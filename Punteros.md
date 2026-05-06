@@ -3,7 +3,7 @@
 cuando pasamos una variable a una funcion por referencia,
 lo que se manda en realidad es la direccion de memoria de la variable
 para ello es necesario ocupar una variable especial denominada
-##### PUNTERO
+##### [[PUNTERO]]
 
 (un puntero es una variable que guarda direcciones de memoria, es decir,
 que nos dice que posicion de la memoria se encuentra ubicada un valor)
@@ -36,7 +36,12 @@ int main()
     printf("El nuevo valor de x es: %d",x);
     return 0;
 }
-
 ```
 
- en este ejemplo 'p' es un puntero de tipo entero y 'x' es una variable de tipo enteo 
+En este ejemplo 'p' es un puntero de tipo entero y 'x' es una variable de tipo entero.
+Al inicio del programa se lee el valor de 'x', para después pasar su dirección de memoria 'p'.
+esto ocurre en el momento en el que se dice 'p = &x', una vez que tiene la dirección de 'x', se puede acceder y modificar al contenido p, esto se ejemplifica, cuando se hace:
+ *p = *p + 1
+Formando como base lo anterior podemos decir que cuando se desea pasar una variable por 
+referencia se debe de hacer con un paso o referencia, la cual se indica desde la declaracion de
+la función, de este modo cualquier cambio que se haga a la variable que se pase por referencia, tendra efecto en el codigo principal 
